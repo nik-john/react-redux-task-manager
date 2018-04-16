@@ -33,19 +33,19 @@ import saga from './saga';
 export class FormPage extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
   render() {
-    const { current, onGoToStep, questions, onReplyUpdate, /* onBack, */ onNext, onStart, progress, error } = this.props;
+    const { current, /* onGoToStep, questions, */ onReplyUpdate, /* onBack, */ onNext, onStart, progress, error } = this.props;
     const progressBar = (ps, c) => c ? (
       <ProgressBarWrapper>
         <ProgressBar>
           {ps.map((p) => (
-            <ProgressBarItem answered={(p.getIn(['question', 'reply']) !== '')} key={Math.random()} onClick={() => handleGoToStep(p.get('question'))}>
+            <ProgressBarItem answered={(p.getIn(['question', 'reply']) !== '')} key={Math.random()} /* onClick={() => handleGoToStep(p.get('question'))} */>
               { p.getIn(['question', 'reply']) !== '' ? (<span>&#10004;</span>) : p.get('index')}
             </ProgressBarItem>
           ))}
         </ProgressBar>
       </ProgressBarWrapper>
     ) : '';
-    const handleGoToStep = (q) => onGoToStep(questions, q.get('index'), q.get('id'));
+    // const handleGoToStep = (q) => onGoToStep(questions, q.get('index'), q.get('id'));
     const handleNext = () => onNext(current);
     // const handleBack = () => onBack(current);
     const handleSubmit = () => {
@@ -72,7 +72,7 @@ export class FormPage extends React.Component { // eslint-disable-line react/pre
 
 FormPage.propTypes = {
   error: PropTypes.object,
-  questions: PropTypes.object,
+  // questions: PropTypes.object,
   // id: PropTypes.string,
   // text: PropTypes.string,
   // reply: PropTypes.string,
@@ -91,7 +91,7 @@ FormPage.propTypes = {
   onStart: PropTypes.func,
   onNext: PropTypes.func,
   // onBack: PropTypes.func,
-  onGoToStep: PropTypes.func,
+  // onGoToStep: PropTypes.func,
   onReplyUpdate: PropTypes.func,
 };
 
