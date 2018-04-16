@@ -45,3 +45,4 @@
 4. Add Animations
 5. Add Header and Footer
 6. Improve Test Coverage
+7. Improve file organization
