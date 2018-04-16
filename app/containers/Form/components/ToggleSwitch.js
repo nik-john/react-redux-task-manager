@@ -5,6 +5,11 @@ const ToggleSwitch = styled.div`
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    position: relative;
+    h5 {
+        margin-left: 15px;
+        width: 20px;
+    }
     input[type=checkbox]{
         height: 0;
         width: 0;

@@ -12,6 +12,7 @@ const TextArea = styled.textarea`
     &:focus {
         border-bottom: 2px solid ${(props) => props.theme.colors.global.blue};
     }
+    transition: border 300ms ease-in;
     border-width: ${(props) => props.disabled ? '0px' : '1px'};
     text-align: ${(props) => props.disabled ? 'center' : 'start'};
     resize: ${(props) => props.disabled ? 'none' : 'auto'};
