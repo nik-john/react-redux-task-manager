@@ -12,7 +12,7 @@ export default defineMessages({
   },
   startProjectMessage: {
     id: 'ss.HomePage.start_project.message',
-    defaultMessage: 'This application is built on ReactJS, Redux, Styled Components, WebPack, Redux Saga and the latest and greates Javascript',
+    defaultMessage: 'This application is built on ReactJS, Redux, Styled Components, WebPack, Redux Saga and the latest and greatest Javascript',
   },
   goToFormButton: {
     id: 'ss.HomePage.cto.label',

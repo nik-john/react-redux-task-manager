@@ -16,10 +16,10 @@ export default styled(Link)`
   font-weight: bold;
   font-size: 16px;
   border: 2px solid ${(props) => props.theme.colors.global.white};;
-  color: ${(props) => props.theme.colors.global.white};;
-
+  color: ${(props) => props.theme.colors.global.white};
+  transition: all 300ms ease;
   &:active, &:hover {
-    background-color: ${(props) => props.theme.colors.global.blue};
-    color: ${(props) => props.theme.colors.text.light};
+    color: ${(props) => props.theme.colors.global.blue};
+    background: ${(props) => props.theme.colors.text.light};
   }
 `;
