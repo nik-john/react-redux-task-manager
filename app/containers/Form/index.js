@@ -33,7 +33,7 @@ import saga from './saga';
 export class FormPage extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
   render() {
-    const { current, onGoToStep, questions, onReplyUpdate, onBack, onNext, onStart, progress, error } = this.props;
+    const { current, onGoToStep, questions, onReplyUpdate, /* onBack, */ onNext, onStart, progress, error } = this.props;
     const progressBar = (ps, c) => c ? (
       <ProgressBarWrapper>
         <ProgressBar>
@@ -47,10 +47,10 @@ export class FormPage extends React.Component { // eslint-disable-line react/pre
     ) : '';
     const handleGoToStep = (q) => onGoToStep(questions, q.get('index'), q.get('id'));
     const handleNext = () => onNext(current);
-    const handleBack = () => onBack(current);
+    // const handleBack = () => onBack(current);
     const handleSubmit = () => {
       // Also add Submit message here
-      alert('Thanks! Your data has been subimtted');
+      alert('Thanks! Your data has been subimtted'); // eslint-disable-line 
       return onStart();
     };
     return (
@@ -90,7 +90,7 @@ FormPage.propTypes = {
 
   onStart: PropTypes.func,
   onNext: PropTypes.func,
-  onBack: PropTypes.func,
+  // onBack: PropTypes.func,
   onGoToStep: PropTypes.func,
   onReplyUpdate: PropTypes.func,
 };

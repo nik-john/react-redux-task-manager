@@ -92,7 +92,7 @@ function homeReducer(state = initialState, action) {
     case PREVIEW:
       // Update progress to reflect current reply
       return state
-        .setIn(['progress', -1, 'question', 'reply'], state.getIn(['current', 'reply']))
+        .setIn(['progress', -1, 'question', 'reply'], state.getIn(['current', 'reply']));
     case GO_TO_STEP:
       return state
         .set('questions', state.get('questions').set(state.getIn(['current', 'index']), state.get('current')))

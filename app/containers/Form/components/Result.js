@@ -8,7 +8,7 @@ import FormFieldsComponent from './FormFieldsComponent';
 export default function ResultComponent(progress, handleSubmit) {
   return (
     <FormWrapper>
-      <H2>Please Review Your Form</H2>
+      <H2>Claim Submission</H2>
       {progress.map((item) => FormFieldsComponent(item.get('question'), () => false, () => false, true))}
       <Button onClick={handleSubmit}>Submit</Button>
     </FormWrapper>
