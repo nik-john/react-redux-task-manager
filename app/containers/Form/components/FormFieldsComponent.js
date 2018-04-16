@@ -8,7 +8,7 @@ import ToggleSwitchComponent from './ToggleSwitchComponent';
 import NumberField from './NumberField';
 
 export default (current, action, handleNext, preview = false) => (
-  <CtoWrapper key={current.get('id')}>
+  <CtoWrapper key={current.get('id')} action="#">
     <h3>{current.get('text')}</h3>
     <div>
       {InputType(action, current, preview)}

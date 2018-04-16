@@ -95,6 +95,8 @@ function homeReducer(state = initialState, action) {
         .setIn(['progress', -1, 'question', 'reply'], state.getIn(['current', 'reply']));
     case GO_TO_STEP:
       return state
+        // Add functionality to save reply when navigating to step
+        // .setIn(['progress', -1, 'question', 'reply'], state.getIn(['current', 'reply']))
         .set('current', state
           .get('progress')
             .find((p) => p.getIn(['question', 'id']) === action.id)
