@@ -25,7 +25,7 @@ import ProgressBar from './components/ProgressBar';
 import FormWrapper from './components/FormWrapper';
 import ProgressBarWrapper from './components/ProgressBarWrapper';
 import FormFieldsComponent from './components/FormFieldsComponent';
-import StartSection from './components/StartSection';
+import StartSection from './components/StartSectionComponent';
 import PreviewSection from './components/Result';
 
 import saga from './saga';
@@ -33,19 +33,20 @@ import saga from './saga';
 export class FormPage extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
   render() {
-    const { current, /* onGoToStep, questions, */ onReplyUpdate, /* onBack, */ onNext, onStart, progress, error } = this.props;
+    const { current, onGoToStep, /* questions, */ onReplyUpdate, /* onBack, */ onNext, onStart, progress, error } = this.props;
     const progressBar = (ps, c) => c ? (
       <ProgressBarWrapper>
         <ProgressBar>
           {ps.map((p) => (
-            <ProgressBarItem answered={(p.getIn(['question', 'reply']) !== '')} key={Math.random()} /* onClick={() => handleGoToStep(p.get('question'))} */>
+            <ProgressBarItem answered={(p.getIn(['question', 'reply']) !== '')} key={Math.random()} onClick={() => handleGoToStep(p.get('question'))}>
               { p.getIn(['question', 'reply']) !== '' ? (<span>&#10004;</span>) : p.get('index')}
+              { c.get('id') === p.get('id') ? (<em>&#10004;</em>) : null }
             </ProgressBarItem>
           ))}
         </ProgressBar>
       </ProgressBarWrapper>
     ) : '';
-    // const handleGoToStep = (q) => onGoToStep(questions, q.get('index'), q.get('id'));
+    const handleGoToStep = (p) => onGoToStep(p.get('id'));
     const handleNext = () => onNext(current);
     // const handleBack = () => onBack(current);
     const handleSubmit = () => {
@@ -91,7 +92,7 @@ FormPage.propTypes = {
   onStart: PropTypes.func,
   onNext: PropTypes.func,
   // onBack: PropTypes.func,
-  // onGoToStep: PropTypes.func,
+  onGoToStep: PropTypes.func,
   onReplyUpdate: PropTypes.func,
 };
 
@@ -120,7 +121,7 @@ export function mapDispatchToProps(dispatch) {
       }
       return dispatch(preview(c.get('id')));
     },
-    onGoToStep: (q, i, id) => q.get(i) ? dispatch(goToStep(id)) : false,
+    onGoToStep: (id) => dispatch(goToStep(id)),
   };
 }
 

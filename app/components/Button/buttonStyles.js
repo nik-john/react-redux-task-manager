@@ -16,7 +16,7 @@ const buttonStyles = css`
   font-size: 16px;
   border: 2px solid #41addd;
   color: #41addd;
-
+  transition: all 1s ease;
   &:active {
     background: #41addd;
     color: #fff;

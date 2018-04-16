@@ -95,10 +95,10 @@ function homeReducer(state = initialState, action) {
         .setIn(['progress', -1, 'question', 'reply'], state.getIn(['current', 'reply']));
     case GO_TO_STEP:
       return state
-        .set('questions', state.get('questions').set(state.getIn(['current', 'index']), state.get('current')))
         .set('current', state
-          .get('questions')
-          .find((q) => q.get('id') === action.id) || state.get('current'));
+          .get('progress')
+            .find((p) => p.getIn(['question', 'id']) === action.id)
+              .get('question') || state.get('current'));
     default:
       return state;
   }

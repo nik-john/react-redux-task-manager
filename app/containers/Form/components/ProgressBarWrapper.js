@@ -8,6 +8,7 @@ const ProgressBarWrapper = styled.div`
     flex: 1;
     justify-content: center;
     align-items: center;
+    max-height: 110px;
 `;
 
 export default ProgressBarWrapper;
