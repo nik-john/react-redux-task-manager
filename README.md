@@ -40,9 +40,9 @@
 ## Wishlist
 
 1. Remove Alert from Submit flow
-2. Implement Go To nth Step functionality
+2. ~~Implement Go To nth Step functionality~~
 3. Implement Back functionality
-4. Add Animations
+4. ~~Add Animations~~
 5. Add Header and Footer
 6. Improve Test Coverage
-7. Improve file organization
+7. ~~Improve file organization~~
