@@ -15,7 +15,7 @@ module.exports = (options) => ({
   entry: options.entry,
   output: Object.assign({ // Compile into js/build.js
     path: path.resolve(process.cwd(), 'build'),
-    publicPath: '/react-redux-multi-stage-form-wizard/',
+    publicPath: '/react-redux-multi-stage-form-wizard/build/',
   }, options.output), // Merge with env dependent settings
   module: {
     rules: [
