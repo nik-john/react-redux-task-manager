@@ -45,7 +45,7 @@
     - Progress: Array of answered + current questions
     - Questions: The Questions JSON object
 
-[<video src="https://i.imgur.com/zasaohb.mp4">](http://google.com.au/)
+[!State Tree in Action](https://i.imgur.com/zasaohb.mp4)
 
 
 ## Wishlist
