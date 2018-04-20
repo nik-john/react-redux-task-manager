@@ -1,6 +1,6 @@
 
-<div align="center"><strong>A simple Multi Stage Form Qizard</strong></div>
-<div align="center">THis application has been built using React, Redux, Styled Components and lots of ❤️ </div>
+<div align="center"><strong>A Simple Multi Stage Form Wizard</strong></div>
+<div align="center">This application has been built using React, Redux, Styled Components and lots of ❤️ </div>
 
 <br />
 
