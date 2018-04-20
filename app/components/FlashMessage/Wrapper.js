@@ -8,9 +8,9 @@ const Wrapper = styled.p`
   top: 10px;
   right: 10px;
   padding: 1em 2em;
-  color: ${(props) => props.theme.colors.text.light};
+  color: ${(props) => props.theme.white};
   border-radius: 5px;
-  background: ${(props) => props.type === 'error' ? props.theme.colors.global.red : props.theme.colors.global.green};
+  background: ${(props) => props.type === 'error' ? props.theme.red : props.theme.green};
 `;
 
 export default Wrapper;

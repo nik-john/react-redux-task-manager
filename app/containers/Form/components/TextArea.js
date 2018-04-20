@@ -7,10 +7,10 @@ const TextArea = styled.textarea`
     border-radius: 0;    
     width: 90%;
     padding: 10px;
-    border-bottom: 1px solid ${(props) => props.theme.colors.border.default};
+    border-bottom: 1px solid ${(props) => props.theme.borderDefault};
     outline: none;
     &:focus {
-        border-bottom: 2px solid ${(props) => props.theme.colors.global.blue};
+        border-bottom: 2px solid ${(props) => props.theme.blue};
     }
     transition: border 300ms ease-in;
     border-width: ${(props) => props.disabled ? '0px' : '1px'};

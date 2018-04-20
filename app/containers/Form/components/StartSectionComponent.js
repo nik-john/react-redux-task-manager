@@ -6,7 +6,8 @@ import Button from 'components/Button';
 import StartWrapper from './StartWrapper';
 import messages from '../messages';
 
-export default (c, onStart) => (
+export default function StartSectionComponent(c, onStart) {
+  return (
   c ? '' :
   <StartWrapper>
     <H2>
@@ -21,4 +22,5 @@ export default (c, onStart) => (
       <FormattedMessage {...messages.start} />
     </Button>
   </StartWrapper>
-);
+  );
+}

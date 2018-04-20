@@ -18,19 +18,23 @@ const initialState = fromJS({
   }],
   questions,
 });
+const onStart = () => false;
+const onNext = () => false;
+const onGoToStep = () => false;
+const onReplyUpdate = () => false;
+
 describe('<FormPage />', () => {
   it('should render the intro text list', () => {
     const renderedComponent = shallow(
-      <FormPage {...initialState} />
+      <FormPage {...initialState} onStart={onStart} onNext={onNext} onGoToStep={onGoToStep} onReplyUpdate={onReplyUpdate} />
     );
     expect(renderedComponent.contains(<H2>
       <FormattedMessage {...messages.header} />
     </H2>)).toEqual(true);
   });
   it('should render the start button', () => {
-    const onStart = () => false;
     const renderedComponent = shallow(
-      <FormPage {...initialState} onClick={onStart} />
+      <FormPage {...initialState} onStart={onStart} onNext={onNext} onGoToStep={onGoToStep} onReplyUpdate={onReplyUpdate} />
     );
     expect(renderedComponent.contains(<FormattedMessage {...messages.start} />));
   });

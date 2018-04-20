@@ -27,7 +27,14 @@ const InputType = (action, current, preview) => {
     case 'boolean':
       return ToggleSwitchComponent(action, current.get('reply') || false, preview, current.get('id'));
     case 'date':
-      return <DatePicker disabledDays={{ after: new Date() }} onDayClick={action} value={current.get('reply')} selectedDays={new Date(current.get('reply'))} required disabled={preview} />;
+      return (<DatePicker
+        disabledDays={{ after: new Date() }}
+        onDayClick={action}
+        value={current.get('reply')}
+        selectedDays={new Date(current.get('reply'))}
+        required
+        disabled={preview}
+      />);
     default:
       return <TextArea onChange={action} value={current.get('reply')} rows={preview ? 1 : 5} required placeholder="Type here ..." disabled={preview}></TextArea>;
   }

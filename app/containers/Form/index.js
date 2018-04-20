@@ -51,7 +51,7 @@ export class FormPage extends React.Component { // eslint-disable-line react/pre
     // const handleBack = () => onBack(current);
     const handleSubmit = () => {
       // Also add Submit message here
-      alert('Thanks! Your data has been subimtted'); // eslint-disable-line 
+      alert('Thanks! Your data has been submitted'); // eslint-disable-line 
       return onStart();
     };
     return (
@@ -73,25 +73,11 @@ export class FormPage extends React.Component { // eslint-disable-line react/pre
 
 FormPage.propTypes = {
   error: PropTypes.object,
-  // questions: PropTypes.object,
-  // id: PropTypes.string,
-  // text: PropTypes.string,
-  // reply: PropTypes.string,
-  // type: PropTypes.string,
-  // next: PropTypes.string,
-  // index: PropTypes.number,
   current: PropTypes.object,
-  // id: PropTypes.string,
-  // text: PropTypes.string,
-  // reply: PropTypes.string,
-  // type: PropTypes.string,
-  // next: PropTypes.string,
-  // step: PropTypes.number,
   progress: PropTypes.object,
 
   onStart: PropTypes.func,
   onNext: PropTypes.func,
-  // onBack: PropTypes.func,
   onGoToStep: PropTypes.func,
   onReplyUpdate: PropTypes.func,
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { fromJS } from 'immutable';
 import Button from 'components/Button';
-import DatePicker from 'react-day-picker';
+// import DayPicker from 'react-day-picker';
 
 import FormFieldsComponent from '../components/FormFieldsComponent';
 
@@ -37,17 +37,5 @@ describe('<FormFieldsComponent />', () => {
       <Button onClick={handleNext} disabled={false}>
         Next
       </Button>)).toEqual(true);
-  });
-
-  it('should contain the DatePicker component when type is \'date\'', () => {
-    const renderedComponent = shallow(FormFieldsComponent(current, action, handleNext));
-    expect(renderedComponent.contains(
-      <DatePicker
-        onDayClick={action}
-        value={current.get('reply')}
-        selectedDays={new Date(current.get('reply'))}
-        required
-        disabled={false}
-      />)).toEqual(true);
   });
 });

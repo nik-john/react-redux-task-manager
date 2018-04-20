@@ -38,21 +38,12 @@ const AppWrapper = styled.div`
 `;
 
 const theme = {
-  colors: {
-    global: {
-      blue: '#178cd3',
-      white: '#ffffff',
-      green: '#67bd45',
-      red: '#f44336',
-    },
-    text: {
-      light: '#ffffff',
-      dark: '#616161',
-    },
-    border: {
-      default: 'rgba(189, 189, 189, 0.5)',
-    },
-  },
+  blue: '#178cd3',
+  white: '#ffffff',
+  green: '#67bd45',
+  red: '#f44336',
+  textDark: '#616161',
+  borderDefault: 'rgba(189, 189, 189, 0.5)',
 };
 
 export default function App() {

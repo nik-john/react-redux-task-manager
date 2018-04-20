@@ -39,7 +39,7 @@ const ToggleSwitch = styled.div`
     }
 
     input:checked + label {
-        background: ${(props) => props.theme.colors.global.blue};
+        background: ${(props) => props.theme.blue};
     }
 
     input:checked + label:after {

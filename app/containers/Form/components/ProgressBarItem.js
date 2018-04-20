@@ -14,19 +14,19 @@ background: #777;
 display: inline-flex;
 border-width: 1px;
 border-style: solid;
-border-color: ${(props) => props.theme.colors.border.default};
+border-color: ${(props) => props.theme.borderDefault};
 transition: all 300ms ease;
 &:hover {
-    border-color: ${(props) => props.theme.colors.border.default};
-    color: ${(props) => props.theme.colors.text.dark};
-    background-color: ${(props) => props.theme.colors.global.white};
+    border-color: ${(props) => props.theme.borderDefault};
+    color: ${(props) => props.theme.textDark};
+    background-color: ${(props) => props.theme.white};
 }
 ${(props) => props.answered && css `
-    background: ${props.theme.colors.global.blue};
+    background: ${props.theme.blue};
     &:hover {
-        border-color: ${props.theme.colors.global.blue};
-        color: ${props.theme.colors.global.blue};
-        background-color: ${props.theme.colors.global.white};
+        border-color: ${props.theme.blue};
+        color: ${props.theme.blue};
+        background-color: ${props.theme.white};
     }
 `}
 `;
