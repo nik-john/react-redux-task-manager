@@ -37,6 +37,17 @@
 3. Run `yarn start` or `npm start`
 4. To see test coverage, run `npm test`
 
+## State Structure
+
+- App
+  - Form
+    - Current: Active question
+    - Progress: Array of answered + current questions
+    - Questions: The Questions JSON object
+
+[<video src="https://i.imgur.com/zasaohb.mp4">](http://google.com.au/)
+
+
 ## Wishlist
 
 1. Remove Alert from Submit flow
