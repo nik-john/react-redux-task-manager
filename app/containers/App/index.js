@@ -13,10 +13,10 @@ import { Switch, Route } from 'react-router-dom';
 
 // import TasksList from 'containers/TasksList/Loadable';
 import Tasks from 'containers/Tasks';
+import { AppWrapper, theme } from 'containers/App/Styles';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Header from 'components/Header';
 
-import { AppWrapper, theme } from './Styles';
 // import Footer from 'components/Footer';
 
 
