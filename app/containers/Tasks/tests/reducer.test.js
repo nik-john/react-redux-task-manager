@@ -11,6 +11,7 @@ describe('tasksReducer', () => {
     expect(tasksReducer(undefined, {})).toEqual(fromJS({
       tasks: false,
       currentTask: false,
+      flushSeedData: false,
     }));
   });
   // it('returns populated currentTask upon init', () => {
