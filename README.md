@@ -1,6 +1,6 @@
 
-<div align="center"><strong>A Simple Multi Stage Form Wizard</strong></div>
-<div align="center">This application has been built using React, Redux, Styled Components and lots of ❤️ </div>
+<div align="center"><strong>An offline-first, responsive Task Manager Application</strong></div>
+<div align="center">This application uses React, Redux, Styled Components, ImmutableJS and other cool tech. </div>
 
 <br />
 
@@ -39,21 +39,30 @@
 
 ## State Structure
 
-- App
-  - Form
-    - Current: Active question
-    - Progress: Array of answered + current questions
-    - Questions: The Questions JSON object
-
-![](https://lh3.googleusercontent.com/wFZz-t9dEBssK2ld4mqcE5AFeFopLxR6CEmxuT07wwXA_ziKMUd9qHevfK5AsPOsQKNIsN7uPPcYvSVhAXxwujn5csBvVT5XQCUETEu_soVpj9YWEKpV7L5QNTA4QFK4MYl5RxGAKmOpol8WTwJO8xJtXG_sWYlMU46RI5-QGeMy_XeUjjhNSU3UTeFK-UIe3Fcwq-mBXYUaqiGfFYsyd3V6D5UyNVcWtpSk1GtpPuM8G8_-4BSXrko4bm-Gft_YwrnGh6KVvQUDtdgfAILf1xwpP2C7WVuQkr7mGi8UAKwRKZXTsYcb8pegSjI1ObW10Ecd88wQs4Xle58cOcAO1beT3R8AYf0VhizJHNT5k42aKxTUJrcJbuqnHxO9Jb3eeIKfw1-2d5uPnFQ_ME3RkEZF5Fvtl58sCUeEhQZdbYnN-q0188NRVVkZxMfkRsOpeX-7-fB7cvJZF8pITbPcaOmxXmZUcPcX_90yqxNCNShZrl3Rm4M_fiw2J1z5FrBDTbaRFzX1nM5vyD_M0WWYwdJhgALSo2nxxvTk06uB9ZZnSmcz1-FBCD8A6D8s_yW7=w1471-h983)
+ ```
+tasks: [
+  {
+    id: 'fccfe817-418e-48f3-9402-c447a8376a94',
+    title: 'Create Project Structure',
+    edit: false,
+    status: 'active'
+  },
+  {
+    id: '74154ff3-610d-4a90-b1a1-a95e5dc075e2',
+    title: 'Add styles',
+    edit: false,
+    status: 'active'
+  }
+],
+currentTask: {
+  id: 'c575bff6-4d9a-4fa0-bfa1-c3de7fc64827',
+  title: null,
+  status: 'active',
+  edit: false
+}
+```
 
 
 ## Wishlist
 
-1. Remove Alert from Submit flow
-2. ~~Implement Go To nth Step functionality~~
-3. Implement Back functionality
-4. ~~Add Animations~~
-5. Add Header and Footer
-6. Improve Test Coverage
-7. ~~Improve file organization~~
+1. 

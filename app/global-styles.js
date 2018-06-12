@@ -17,14 +17,13 @@ injectGlobal`
   }
 
   #app {
-    background-color: #178cd3;
+    background-color: #fff;
     min-height: 100%;
     min-width: 100%;
   }
 
   p,
   label {
-    font-family: Georgia, Times, 'Times New Roman', serif;
-    line-height: 1.5em;
+    margin: 0px;
   }
 `;
