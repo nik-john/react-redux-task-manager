@@ -65,4 +65,7 @@ currentTask: {
 
 ## Wishlist
 
-1. 
+1. Move UUID creation from reducer to Action creator to ensure purity of reducer function
+2. Implement Demo Flow
+3. Do basic cross browser testing
+4. 

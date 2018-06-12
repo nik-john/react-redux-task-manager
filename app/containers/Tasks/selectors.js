@@ -24,8 +24,14 @@ const makeSelectCurrentTask = () => createSelector(
   (tasksState) => tasksState.get('currentTask')
 );
 
+const makeSelectFlushSeedData = () => createSelector(
+  selectTasksDomain,
+  (tasksState) => tasksState.get('flushSeedData')
+);
+
 export {
   selectTasksDomain,
   makeSelectTasks,
   makeSelectCurrentTask,
+  makeSelectFlushSeedData,
 };

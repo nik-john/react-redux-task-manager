@@ -13,16 +13,17 @@ import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 
 import H2 from 'components/H2';
+import Info from 'components/Info';
 import MessagesBar from 'components/MessagesBar';
 
 import Task from 'containers/Task';
 
 import injectReducer from 'utils/injectReducer';
-import { makeSelectTasks, makeSelectCurrentTask } from './selectors';
+import { makeSelectTasks, makeSelectCurrentTask, makeSelectFlushSeedData } from './selectors';
 import reducer from './reducer';
 import messages from './messages';
 import { Wrapper, TaskContainerWrapper } from './Styles';
-import { initAdd } from './actions';
+import { initAdd, addSeedData } from './actions';
 
 export class Tasks extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   componentDidMount() {
@@ -35,7 +36,7 @@ export class Tasks extends React.PureComponent { // eslint-disable-line react/pr
     }
   }
   render() {
-    const { tasks, currentTask } = this.props;
+    const { tasks, currentTask, onAddSeedData, flushSeedData } = this.props;
     const TaskList = [...tasks, currentTask].map((t) => <Task task={t} key={t.id ? t.id : 'key'} />);
     const activeTasks = tasks ? tasks.filter((t) => t.status === 'active') : [];
     return (
@@ -53,6 +54,7 @@ export class Tasks extends React.PureComponent { // eslint-disable-line react/pr
             {TaskList}
           </TaskContainerWrapper>
         </div>
+        <Info addSeedData={onAddSeedData} hide={flushSeedData} />
       </Wrapper>
     );
   }
@@ -68,17 +70,23 @@ Tasks.propTypes = {
     PropTypes.any,
     PropTypes.bool,
   ]),
+  onAddSeedData: PropTypes.func,
+  flushSeedData: PropTypes.bool,
 };
 
 const mapStateToProps = createStructuredSelector({
   tasks: makeSelectTasks(),
   currentTask: makeSelectCurrentTask(),
+  flushSeedData: makeSelectFlushSeedData(),
 });
 
 function mapDispatchToProps(dispatch) {
   return {
     onInitAdd: () => {
       dispatch(initAdd());
+    },
+    onAddSeedData: () => {
+      dispatch(addSeedData());
     },
   };
 }

@@ -19,11 +19,13 @@ import {
   INIT_ADD,
   SAVE_TASK,
   UNDO_TASK_STATUS,
+  ADD_SEED_DATA,
 } from './constants';
 
 const initialState = fromJS({
   tasks: false,
   currentTask: false,
+  flushSeedData: false,
 });
 
 function tasksReducer(state = initialState, action) {
@@ -50,6 +52,10 @@ function tasksReducer(state = initialState, action) {
             edit: true,
             id: v4(),
           }]);
+    case ADD_SEED_DATA:
+      return state
+        .set('tasks', action.tasks)
+        .set('flushSeedData', true);
     case COMPLETE_TASK:
       return state
         .set('tasks', state.get('tasks').map((t) => t.id === action.id ? {

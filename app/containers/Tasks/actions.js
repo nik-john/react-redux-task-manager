@@ -5,7 +5,7 @@
  */
 
 import {
-  COMPLETE_TASK, INIT_ADD, ADD_TASK, INIT_EDIT, SAVE_TASK, UNDO_TASK_STATUS, UNDO_TASK_CHANGE,
+  COMPLETE_TASK, INIT_ADD, ADD_TASK, INIT_EDIT, SAVE_TASK, UNDO_TASK_STATUS, UNDO_TASK_CHANGE, ADD_SEED_DATA, SEED_DATA,
 } from './constants';
 
 
@@ -43,6 +43,19 @@ export function addTask(task) {
   return {
     type: ADD_TASK,
     task,
+  };
+}
+
+/**
+ * Adds a set of sample tasks to the board
+ *
+ *
+ * @return {object}    An action object with a type of ADD_SEED_DATA
+ */
+export function addSeedData() {
+  return {
+    type: ADD_SEED_DATA,
+    tasks: SEED_DATA,
   };
 }
 
