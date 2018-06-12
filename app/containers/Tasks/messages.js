@@ -7,7 +7,7 @@ import { defineMessages } from 'react-intl';
 
 export default defineMessages({
   startProjectHeader: {
-    id: 'todos.header',
+    id: 'simpleTask.header',
     defaultMessage: 'Your tasks',
   },
 });

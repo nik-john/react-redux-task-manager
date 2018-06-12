@@ -12,15 +12,12 @@ export const Wrapper = styled.article `
   height: 85px;
   display: flex;
   margin-bottom: 20px;
-  min-width: 250px;
   width: 100%;
   &:hover {
     border-color: ${(props) => props.noBorder ? props.theme.blue : props.theme.borderDefault};
   }
-  ${media.phone`
-    width: 47.5%;
-  `}
   ${media.tablet`
+    min-width: 0px;
     width: 30%;
   `} 
   ${media.desktop`

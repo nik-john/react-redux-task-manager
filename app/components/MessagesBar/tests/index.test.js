@@ -28,7 +28,7 @@ describe('<MessagesBar />', () => {
     );
     expect(renderedComponent.contains(
       <section className="title">
-        <FormattedMessage id="todos.components.MessagesBar.completeTasks" defaultMessage="Complete all tasks" />
+        <FormattedMessage id="simpleTask.components.MessagesBar.completeTasks" defaultMessage="Complete all tasks" />
       </section>
     )).toBe(true);
   });

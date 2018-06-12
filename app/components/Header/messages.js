@@ -7,11 +7,11 @@ import { defineMessages } from 'react-intl';
 
 export default defineMessages({
   logo: {
-    id: 'todos.components.Header.logo',
+    id: 'simpleTask.components.Header.logo',
     defaultMessage: 'SimpleTask',
   },
   helloUser: {
-    id: 'todos.components.Header.user.helloUser',
+    id: 'simpleTask.components.Header.user.helloUser',
     defaultMessage: `
       Hello, {username}!
     `,

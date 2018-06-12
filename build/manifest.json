@@ -1,7 +1,7 @@
 {
-  "name": "react boilerplate",
-  "theme_color": "#b1624d",
-  "background_color": "#fafafa",
+  "name": "SimpleTask",
+  "theme_color": "#22A4F2",
+  "background_color": "#ffffff",
   "display": "standalone",
   "Scope": "/",
   "start_url": "/",

@@ -7,23 +7,23 @@ import { defineMessages } from 'react-intl';
 
 export default defineMessages({
   complete: {
-    id: 'todos.components.TasksCard.complete',
+    id: 'simpleTask.components.TasksCard.complete',
     defaultMessage: 'Complete',
   },
   undo: {
-    id: 'todos.components.TasksCard.undo',
+    id: 'simpleTask.components.TasksCard.undo',
     defaultMessage: 'Undo',
   },
   save: {
-    id: 'todos.components.TasksCard.save',
+    id: 'simpleTask.components.TasksCard.save',
     defaultMessage: 'Save',
   },
   edit: {
-    id: 'todos.components.TasksCard.edit',
+    id: 'simpleTask.components.TasksCard.edit',
     defaultMessage: 'Edit',
   },
   addTask: {
-    id: 'todos.components.TasksCard.addTask',
+    id: 'simpleTask.components.TasksCard.addTask',
     defaultMessage: '+ Add Task',
   },
 });
