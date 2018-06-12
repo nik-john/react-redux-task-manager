@@ -24,6 +24,9 @@ export class Default extends React.Component {
       showOverlay: false,
     });
   }
+  toggelOverlay = () => this.setState({
+    showOverlay: !this.state.showOverlay,
+  })
   handleUndo = () => this.props.onUndoTaskStatus(this.props.id);
   handleComplete = () => this.props.onComplete(this.props.id);
   handleEdit = () => this.props.onInitEdit(this.props.id);
@@ -31,7 +34,7 @@ export class Default extends React.Component {
     const { title, status } = this.props;
     const { showOverlay } = this.state;
     return (
-      <Wrapper onMouseEnter={this.showOverlay} onMouseLeave={this.hideOverlay}>
+      <Wrapper onMouseEnter={this.showOverlay} onMouseLeave={this.hideOverlay} onClick={this.toggelOverlay}>
         <DefaultView>
           <TextContainer>
             <p className="title">
