@@ -1,4 +1,4 @@
-import { injectGlobal } from 'styled-components';
+import { injectGlobal, css } from 'styled-components';
 
 /* eslint no-unused-expressions: 0 */
 injectGlobal`
@@ -27,3 +27,19 @@ injectGlobal`
     margin: 0px;
   }
 `;
+
+const sizes = {
+  desktop: 992,
+  tablet: 768,
+  phone: 376,
+};
+
+export const media = Object.keys(sizes).reduce((acc, label) => {
+  acc[label] = (...args) => css`
+    @media (min-width: ${sizes[label] / 16}em) {
+      ${css(...args)}
+    }
+  `;
+
+  return acc;
+}, {});

@@ -48,6 +48,7 @@ import { translationMessages } from './i18n';
 
 // Import CSS reset and Global Styles
 import './global-styles';
+// import { fromJS } from 'immutable';
 
 // Observe loading of Open Sans (to remove open sans, remove the <link> tag in
 // the index.html file and this observer)
@@ -61,6 +62,12 @@ openSansObserver.load().then(() => {
 });
 
 // Create redux store with history
+// const initialState = fromJS({
+//   global: null,
+//   route: null,
+//   language: null,
+// });
+
 const initialState = {};
 const history = createHistory();
 const store = configureStore(initialState, history);

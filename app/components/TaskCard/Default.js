@@ -24,7 +24,7 @@ export class Default extends React.Component {
       showOverlay: false,
     });
   }
-  handleUndo = () => this.props.onUndo(this.props.id);
+  handleUndo = () => this.props.onUndoTaskStatus(this.props.id);
   handleComplete = () => this.props.onComplete(this.props.id);
   handleEdit = () => this.props.onInitEdit(this.props.id);
   render() {
@@ -60,5 +60,5 @@ Default.propTypes = {
   status: PropTypes.oneOf(['completed', 'active']),
   onInitEdit: PropTypes.func,
   onComplete: PropTypes.func,
-  onUndo: PropTypes.func,
+  onUndoTaskStatus: PropTypes.func,
 };

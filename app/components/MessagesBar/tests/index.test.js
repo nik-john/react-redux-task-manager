@@ -3,30 +3,32 @@ import { shallow } from 'enzyme';
 import { FormattedMessage } from 'react-intl';
 
 import messages from '../messages';
-import Footer from '../index';
+import MessagesBar from '../index';
+import Wrapper from '../Wrapper';
 
-describe('<Footer />', () => {
-  it('should render the copyright notice', () => {
+describe('<MessagesBar />', () => {
+  it('should render the empty message', () => {
     const renderedComponent = shallow(
-      <Footer />
+      <MessagesBar activeCount={0} totalCount={0} />
     );
     expect(renderedComponent.contains(
-      <section>
-        <FormattedMessage {...messages.licenseMessage} />
-      </section>
+      <Wrapper className="active">
+        <section className="title">
+          <FormattedMessage {...messages.tasksEmpty} />
+        </section>
+        <section className="sub">
+          <FormattedMessage {...messages.tasksEmptySub} />
+        </section>
+      </Wrapper>
     )).toBe(true);
   });
-
-  it('should render the credits', () => {
-    const renderedComponent = shallow(<Footer />);
+  it('should render the Complete Tasks message', () => {
+    const renderedComponent = shallow(
+      <MessagesBar activeCount={1} totalCount={1} />
+    );
     expect(renderedComponent.contains(
-      <section>
-        <FormattedMessage
-          {...messages.authorMessage}
-          values={{
-            author: 'Nikhil John',
-          }}
-        />
+      <section className="title">
+        <FormattedMessage id="todos.components.MessagesBar.completeTasks" defaultMessage="Complete all tasks" />
       </section>
     )).toBe(true);
   });

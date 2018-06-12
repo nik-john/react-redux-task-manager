@@ -1,33 +1,50 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { FormattedMessage } from 'react-intl';
 
-import messages from '../messages';
-import Footer from '../index';
+import { Default, Edit, Add } from '../index';
 
-describe('<Footer />', () => {
-  it('should render the copyright notice', () => {
+import {
+  TextContainer,
+  Status,
+  AddView,
+} from '../Styles';
+
+describe('<Default />', () => {
+  it('Should render an empty Wrapper', () => {
     const renderedComponent = shallow(
-      <Footer />
+      <Default />
     );
     expect(renderedComponent.contains(
-      <section>
-        <FormattedMessage {...messages.licenseMessage} />
-      </section>
+      <TextContainer>
+        <p className="title" />
+        <Status completed={false} />
+      </TextContainer>
     )).toBe(true);
   });
+});
 
-  it('should render the credits', () => {
-    const renderedComponent = shallow(<Footer />);
+describe('<Edit />', () => {
+  it('Should contain the title', () => {
+    const renderedComponent = shallow(
+      <Edit id="123" title="abc" onEdit={() => {}} onUndoTaskChange={() => {}} />
+    );
     expect(renderedComponent.contains(
-      <section>
-        <FormattedMessage
-          {...messages.authorMessage}
-          values={{
-            author: 'Nikhil John',
-          }}
-        />
-      </section>
+      <label htmlFor="title">
+        Enter Task Name
+      </label>
+    )).toBe(true);
+  });
+});
+
+describe('<Add />', () => {
+  it('Should contain the title', () => {
+    const renderedComponent = shallow(
+      <Add id="123" title="abc" edit={false} status="active" onAdd={() => {}} />
+    );
+    expect(renderedComponent.contains(
+      <AddView>
+        + Add Task
+      </AddView>
     )).toBe(true);
   });
 });

@@ -18,6 +18,7 @@ import {
   INIT_EDIT,
   INIT_ADD,
   SAVE_TASK,
+  UNDO_TASK_STATUS,
 } from './constants';
 
 const initialState = fromJS({
@@ -25,20 +26,15 @@ const initialState = fromJS({
   currentTask: false,
 });
 
-const currentTaskTemplate = {
-  id: null,
-  title: null,
-  status: 'active',
-  edit: false,
-};
-
 function tasksReducer(state = initialState, action) {
   switch (action.type) {
     case INIT_ADD:
       return state
         .set('currentTask', {
-          ...currentTaskTemplate,
           id: v4(),
+          title: null,
+          status: 'active',
+          edit: false,
         });
     case ADD_TASK:
       return state.get('tasks').length ?
@@ -61,12 +57,15 @@ function tasksReducer(state = initialState, action) {
           status: 'completed',
         } : t,
         ));
-    case UNDO_TASK_CHANGE:
+    case UNDO_TASK_STATUS:
       return state
         .set('tasks', state.get('tasks').map((t) => t.id === action.id ? {
           ...t,
           status: t.status === 'completed' ? 'active' : 'completed',
         } : t));
+    case UNDO_TASK_CHANGE:
+      return state
+        .set('tasks', state.get('tasks').filter((t) => t.title && t.title.length));
     case INIT_EDIT:
       return state
         .set('tasks', state.get('tasks').map((t) => t.id === action.id ? {

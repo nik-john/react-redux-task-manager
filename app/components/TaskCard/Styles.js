@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { media } from '../../global-styles';
 
 export const Wrapper = styled.article `
   border-radius: 3px;
@@ -8,20 +9,30 @@ export const Wrapper = styled.article `
   position: relative;
   padding: 0px 20px;
   color: ${(props) => props.theme.lightGrey};
-  width: 30%;
   height: 85px;
   display: flex;
   margin-bottom: 20px;
-  margin-right: 3.33%;
-  min-width: 275px;
+  min-width: 250px;
+  width: 100%;
   &:hover {
     border-color: ${(props) => props.noBorder ? props.theme.blue : props.theme.borderDefault};
   }
+  ${media.phone`
+    width: 47.5%;
+  `}
+  ${media.tablet`
+    width: 30%;
+  `} 
+  ${media.desktop`
+    width: 25%;
+  `} 
 `;
 
 export const DefaultView = styled.article `
   display: flex;
+  overflow: hidden;
 `;
+
 export const Overlay = styled.div `
   border-radius: 3px;
   position: absolute;
@@ -69,6 +80,7 @@ export const EditView = styled.form `
   display: flex;
   align-items: center;
   justify-content: space-around;
+  width: 100%;
   input {
     width: 100%;
     padding:10px 10px 10px 5px;

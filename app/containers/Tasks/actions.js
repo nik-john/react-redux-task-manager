@@ -5,14 +5,8 @@
  */
 
 import {
-  DEFAULT_ACTION, COMPLETE_TASK, INIT_ADD, ADD_TASK, INIT_EDIT, SAVE_TASK, UNDO_TASK_CHANGE,
+  COMPLETE_TASK, INIT_ADD, ADD_TASK, INIT_EDIT, SAVE_TASK, UNDO_TASK_STATUS, UNDO_TASK_CHANGE,
 } from './constants';
-
-export function defaultAction() {
-  return {
-    type: DEFAULT_ACTION,
-  };
-}
 
 
 /**
@@ -91,6 +85,20 @@ export function saveTask(id, title) {
 export function completeTask(id) {
   return {
     type: COMPLETE_TASK,
+    id,
+  };
+}
+
+/**
+ * Undo changes to a task's status
+ *
+ * @param  {id} id The id of the task
+ *
+ * @return {object}    An action object with a type of UNDO_TASK_STATUS
+ */
+export function undoTaskStatus(id) {
+  return {
+    type: UNDO_TASK_STATUS,
     id,
   };
 }

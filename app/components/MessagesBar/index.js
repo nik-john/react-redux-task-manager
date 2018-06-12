@@ -35,8 +35,8 @@ function MessagesBar(props) {
 }
 
 MessagesBar.propTypes = {
-  activeCount: PropTypes.number,
-  totalCount: PropTypes.number,
+  activeCount: PropTypes.number.isRequired,
+  totalCount: PropTypes.number.isRequired,
 };
 
 export default MessagesBar;

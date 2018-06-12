@@ -3,28 +3,28 @@ import { shallow } from 'enzyme';
 import { FormattedMessage } from 'react-intl';
 
 import messages from '../messages';
-import Footer from '../index';
+import Header from '../index';
 
-describe('<Footer />', () => {
-  it('should render the copyright notice', () => {
+describe('<Header />', () => {
+  it('should render the logo', () => {
     const renderedComponent = shallow(
-      <Footer />
+      <Header />
     );
     expect(renderedComponent.contains(
-      <section>
-        <FormattedMessage {...messages.licenseMessage} />
+      <section className="logo">
+        <FormattedMessage {...messages.logo} />
       </section>
     )).toBe(true);
   });
 
-  it('should render the credits', () => {
-    const renderedComponent = shallow(<Footer />);
+  it('should render the username', () => {
+    const renderedComponent = shallow(<Header />);
     expect(renderedComponent.contains(
-      <section>
+      <section className="account">
         <FormattedMessage
-          {...messages.authorMessage}
+          {...messages.helloUser}
           values={{
-            author: 'Nikhil John',
+            username: 'Nikhil',
           }}
         />
       </section>

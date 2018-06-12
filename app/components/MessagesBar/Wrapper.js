@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Wrapper = styled.footer`
+const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   color: ${(props) => props.theme.white};
