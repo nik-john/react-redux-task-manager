@@ -1,10 +1,8 @@
 import styled from 'styled-components';
+import { media } from '../../global-styles';
 
-const Wrapper = styled.header`
-  display: flex;
-  justify-content: space-between;
+export const Wrapper = styled.header`
   padding: 0px 20px;
-  align-items: center;
   border-top: 1px solid #666;
   position: fixed;
   top: 0;
@@ -15,11 +13,21 @@ const Wrapper = styled.header`
   height: 55px;
   box-shadow: 0 0 8px 0 rgba(0,0,0,.3);
   z-index: 2;
+  display: flex;
+  justify-content: center;
+`;
+
+export const InnerContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  ${media.desktop`
+    width: calc(100vh - 100px);
+  `} 
   .logo {
     font-weight: 800;
     font-size: 20px;
     color: ${(props) => props.theme.blue}; 
   }
 `;
-
-export default Wrapper;

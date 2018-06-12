@@ -1,9 +1,9 @@
 import styled, { keyframes } from 'styled-components';
-
+import { media } from '../../global-styles';
 export const Wrapper = styled.div`
   position: fixed;
-  bottom: 50px;
-  right: 50px;
+  bottom: 20px;
+  right: 20px;
   height: 50px;
   width: 50px;
   border-radius: 50px;
@@ -18,6 +18,16 @@ export const Wrapper = styled.div`
     animation: none;
   }
   display: ${(props) => props.hide ? 'none' : 'auto'};
+  ${media.desktop`
+    position: absolute;
+    right: 0px;
+    top: 50vh;
+  `} 
+  ${media.tablet`
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+  `} 
 `;
 export const AddButton = styled.button`
   cursor: pointer;

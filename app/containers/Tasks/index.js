@@ -52,9 +52,9 @@ export class Tasks extends React.PureComponent { // eslint-disable-line react/pr
           <MessagesBar activeCount={activeTasks.length} totalCount={tasks ? tasks.length : 0} />
           <TaskContainerWrapper>
             {TaskList}
+            <Info addSeedData={onAddSeedData} hide={flushSeedData} />
           </TaskContainerWrapper>
         </div>
-        <Info addSeedData={onAddSeedData} hide={flushSeedData} />
       </Wrapper>
     );
   }

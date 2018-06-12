@@ -11,6 +11,7 @@ export const TaskContainerWrapper = styled.section`
   flex-wrap: wrap;
   margin:-10px;
   margin-top: 20px;
+  position: relative;
   > * {
     margin: 10px;
   }

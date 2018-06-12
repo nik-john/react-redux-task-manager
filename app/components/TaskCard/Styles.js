@@ -21,7 +21,7 @@ export const Wrapper = styled.article `
     width: 30%;
   `} 
   ${media.desktop`
-    width: 25%;
+    width: 23.5%;
   `} 
 `;
 
