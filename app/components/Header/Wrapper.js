@@ -14,6 +14,7 @@ const Wrapper = styled.header`
   background: ${(props) => props.theme.white}; 
   height: 55px;
   box-shadow: 0 0 8px 0 rgba(0,0,0,.3);
+  z-index: 2;
   .logo {
     font-weight: 800;
     font-size: 20px;
