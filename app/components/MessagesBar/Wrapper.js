@@ -10,7 +10,7 @@ const Wrapper = styled.section`
   &.active {
     background: ${(props) => props.theme.blue};
   }
-  &.complete {
+  &.completed {
     background: ${(props) => props.theme.green};
   }
   .title {

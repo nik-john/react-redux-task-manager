@@ -7,6 +7,7 @@ import messages from './messages';
 
 function MessagesBar(props) {
   const { activeCount, totalCount } = props;
+  console.log(activeCount, totalCount);
   const isComplete = activeCount === 0 && totalCount !== 0;
   const isEmpty = totalCount === 0;
   // eslint-disable-next-line no-nested-ternary
