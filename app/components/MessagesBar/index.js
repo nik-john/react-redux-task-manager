@@ -23,7 +23,7 @@ function MessagesBar(props) {
       }}
     />);
   return (
-    <Wrapper className={isComplete ? 'complete' : 'active'}>
+    <Wrapper className={isComplete ? 'completed' : 'active'}>
       <section className="title">
         {title}
       </section>

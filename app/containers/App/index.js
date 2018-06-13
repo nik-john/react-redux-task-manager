@@ -34,7 +34,7 @@ const AppWrapper = styled.div`
   color: #444;
   min-width: 300px;
   ${media.desktop`
-    width: calc(100vh - 100px);
+    width: calc(100vw - 200px);
   `} 
 `;
 

@@ -23,8 +23,8 @@ export const InnerContainer = styled.div`
   justify-content: space-between;
   width: 100%;
   ${media.desktop`
-    width: calc(100vh - 100px);
-  `} 
+    width: calc(100vw - 200px);
+  `}
   .logo {
     font-weight: 800;
     font-size: 20px;

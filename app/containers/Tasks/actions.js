@@ -5,9 +5,12 @@
  */
 
 import {
+  v4,
+} from 'uuid';
+
+import {
   COMPLETE_TASK, INIT_ADD, ADD_TASK, INIT_EDIT, SAVE_TASK, UNDO_TASK_STATUS, UNDO_TASK_CHANGE, ADD_SEED_DATA, SEED_DATA,
 } from './constants';
-
 
 /**
  * Adds a new task to the board
@@ -29,6 +32,7 @@ import {
 export function initAdd() {
   return {
     type: INIT_ADD,
+    id: v4(),
   };
 }
 
@@ -42,7 +46,9 @@ export function initAdd() {
 export function addTask(task) {
   return {
     type: ADD_TASK,
-    task,
+    task: {
+      ...task, id: v4(),
+    },
   };
 }
 

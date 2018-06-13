@@ -25,7 +25,7 @@ export const SEED_DATA = [
     id: '33cc8f51-4182-4104-91a5-8136d9bd2545',
     title: 'Add Escape Path',
     edit: false,
-    status: 'complete',
+    status: 'completed',
   },
   {
     id: 'b3190311-acb0-4f3d-9355-254d2c7f2679',
@@ -37,7 +37,7 @@ export const SEED_DATA = [
     id: '3cc452b6-3f3f-41f3-b050-c969406a13e1',
     title: 'Deploy to Heroku',
     edit: false,
-    status: 'complete',
+    status: 'completed',
   },
   {
     id: '33ac7a42-1b50-41c4-86e7-9e1854a70780',

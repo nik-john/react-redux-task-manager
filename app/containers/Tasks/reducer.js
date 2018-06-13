@@ -7,9 +7,6 @@
 import {
   fromJS,
 } from 'immutable';
-import {
-  v4,
-} from 'uuid';
 
 import {
   ADD_TASK,
@@ -33,7 +30,7 @@ function tasksReducer(state = initialState, action) {
     case INIT_ADD:
       return state
         .set('currentTask', {
-          id: v4(),
+          id: action.id,
           title: null,
           status: 'active',
           edit: false,
@@ -44,13 +41,11 @@ function tasksReducer(state = initialState, action) {
           .set('tasks', [...state.get('tasks'), {
             ...action.task,
             edit: true,
-            id: v4(),
           }]) :
         state
           .set('tasks', [{
             ...action.task,
             edit: true,
-            id: v4(),
           }]);
     case ADD_SEED_DATA:
       return state
