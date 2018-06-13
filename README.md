@@ -86,3 +86,4 @@ currentTask: {
 ## Known Issues
 
 1. Tap event on Mobile sporadically fails/behaves weirdly
+2. Styles get unnecessarily cached at times
