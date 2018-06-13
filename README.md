@@ -18,6 +18,15 @@
   <dt>Responsive Design</dt>
   <dd>Mobile first layout, without using any UI Framework</dd>
 
+  <dt>Responsive Inputs</dt>
+  <dd>Input fields respond to touch/click, through a Material Design inspired implementation</dd>
+  
+  <dt>Progressive Web</dt>
+  <dd>Progressive Web Application features through `manifest.json` - Home Icon, Full Screen Native App - like performance, Add to Home Screen alert, Splash Screen etc. on Android and other mobile devices</dd>
+   
+  <dt>Unit Testing</dt>
+  <dd>All components tested via. Enzyme and Jest</dd>
+  
   <dt>Next generation JavaScript (ES6, 7)</dt>
   <dd>Template strings, object destructuring, arrow functions, JSX syntax and more.</dd>
 
@@ -26,7 +35,6 @@
 
   <dt>Industry-standard routing</dt>
   <dd>Routing using React Router</dd>
-
 
   <dt>Offline-first</dt>
   <dd>Production builds are offline first, and therefore optimized for low or no network conditions</dd>
