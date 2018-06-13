@@ -23,11 +23,6 @@ export const Wrapper = styled.div`
     right: 0px;
     top: 50vh;
   `} 
-  ${media.tablet`
-    position: absolute;
-    right: 50px;
-    bottom: 50px;
-  `} 
 `;
 export const AddButton = styled.button`
   cursor: pointer;
